@@ -3,6 +3,8 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			varelaRound: ['"Varela Round"', 'sans-serif'],
+			redditFont: ['verdana', 'arial', 'helvetica', 'sans-serif'],
+			postNumberFont: ['arial', 'verdana', 'helvetica', 'sans-serif'],
 		},
 		extend: {},
 	},
