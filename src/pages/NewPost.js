@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import NavBar from '../components/NavBar';
 import NewLinkPost from '../components/NewLinkPost';
 import NewTextPost from '../components/NewTextPost';
 
-const NewPost = () => {
-	const [isLinkPost, setIsLinkPost] = useState(true);
+const NewPost = ({ isLinkPost, setIsLinkPost }) => {
 	const button = {
 		selected: 'w-14 font-semibold h-6 bg-cyan-500 text-white text-lg',
 		unselected: 'w-14 font-semibold h-5 bg-cyan-200 text-cyan-500 text-sm',
@@ -18,13 +16,13 @@ const NewPost = () => {
 			{/* Text or Link Buttons */}
 			<div className='ml-6 mr-3 mt-3 flex items-end'>
 				<button
-					onClick={() => setIsLinkPost((prevState) => !prevState)}
+					onClick={() => setIsLinkPost(true)}
 					className={isLinkPost ? button.selected : button.unselected}
 				>
 					link
 				</button>
 				<button
-					onClick={() => setIsLinkPost((prevState) => !prevState)}
+					onClick={() => setIsLinkPost(false)}
 					className={!isLinkPost ? button.selected : button.unselected}
 				>
 					text

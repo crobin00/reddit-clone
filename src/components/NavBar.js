@@ -1,9 +1,12 @@
 import { FaRedditAlien } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div className='flex justify-between p-2 bg-cyan-200 border border-solid border-cyan-500 relative'>
-			<div className='flex cursor-pointer'>
+			<div onClick={() => navigate('/')} className='flex cursor-pointer'>
 				<FaRedditAlien className='text-5xl' />
 				<h1 className='font-varelaRound text-5xl ml-2'>reddit</h1>
 			</div>
